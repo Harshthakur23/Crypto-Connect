@@ -16,12 +16,24 @@ const Sidenav = () => {
     link: "/transactions",
   },
 ]
-  return  <Stack justifyContent="space-between" boxShadow="lg"  w="16rem" h="100vh" bg="#000000">
+  return <Stack 
+  justifyContent="space-between" 
+  boxShadow={{
+    base: "none",
+    lg: "lg",
+
+  }} 
+   w={{
+    base: "full",
+    lg:"16rem",
+   }}
+    h="100vh"
+      >
     <Box>
 
    
      
-    <Heading textAlign="center" fontSize="20px" as="h1" pt="56px" color="white">
+    <Heading textAlign="center" fontSize="20px" as="h1" pt="56px" >
       CRYPTOCONNECT
       </Heading>
       <Box mt="6" mx="3" mb="6">  
@@ -38,7 +50,7 @@ const Sidenav = () => {
       color="#323232"
       >
         <Icon as={nav.icon} />
-        <Text fontSize="14px" fontWeight="medium" color="white">
+        <Text fontSize="14px" fontWeight="medium">
           {nav.text}
           </Text>
       </HStack>
@@ -58,7 +70,7 @@ const Sidenav = () => {
       color="#323232"
       >
         <Icon as={BiSupport} />
-        <Text fontSize="14px" fontWeight="medium" color="white">
+        <Text fontSize="14px" fontWeight="medium" >
           Support
           </Text>
       </HStack>
